@@ -1,5 +1,4 @@
 const wb = {
-    color:"",
     getColor(Type="String",Num=1){
         let random = function(){
             return "#" + Math.round(Math.random() * 0xffffff).toString(16);
@@ -23,6 +22,9 @@ const wb = {
             }
             return str.replace(/,$/,'');
         }
+    },
+    consoleColor(msg,style = 'color:#43bb88;font-size:24px;font-weight:bold;text-decoration:underline'){
+        console.log('%c'+msg,style);
     }
 }
 export default wb;
